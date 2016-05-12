@@ -54,7 +54,7 @@ public class HorizontalPickerView: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        if dataSource != nil && delegate != nil {
+        if dataSource != nil && delegate != nil && dataSource?.numberOfRowsInHorizontalPickerView(self) > 0  {
             if isInitialized == false {
                 isInitialized = true
                 if let view = collectionController.collectionView {
