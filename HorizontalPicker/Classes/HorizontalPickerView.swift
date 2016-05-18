@@ -14,8 +14,8 @@ import UIKit
  */
 struct HorizontalPickerViewConstants {
     static let pathCornerRadii              = CGSize(width: 10, height: 5)
-    static let maxLabelWidthFactor: CGFloat = 0.5    // defines how man width space a single element can occupy as portion of the total width
-    static let maxRotationAngle: Float      = -60.0  // elements are rotated around the y axis depending on the distance from the center
+    static let maxLabelWidthFactor: CGFloat = 0.8    // defines how man width space a single element can occupy as portion of the total width
+    static let maxRotationAngle: Float      = -30.0  // elements are rotated around the y axis depending on the distance from the center
 }
 
 public protocol HorizontalPickerViewDataSource {
