@@ -13,9 +13,9 @@ import UIKit
  - maxLabelWidthFactor: Defines the max width of one entry as percentage of the picker views width.
  */
 struct HorizontalPickerViewConstants {
-    static let pathCornerRadii              = CGSize(width: 10, height: 5)
+    static let pathCornerRadii              = CGSize(width: 0, height: 5)
     static let maxLabelWidthFactor: CGFloat = 0.8    // defines how man width space a single element can occupy as portion of the total width
-    static let maxRotationAngle: Float      = -30.0  // elements are rotated around the y axis depending on the distance from the center
+    static let maxRotationAngle: Float      = 0.0  // elements are rotated around the y axis depending on the distance from the center
 }
 
 public protocol HorizontalPickerViewDataSource {
