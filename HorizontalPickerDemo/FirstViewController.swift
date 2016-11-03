@@ -21,36 +21,36 @@ class FirstViewController: UIViewController, HorizontalPickerViewDataSource, Hor
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.tintColor = UIColor.redColor()
+        self.view.tintColor = UIColor.red
         horizontalPicker.dataSource = self
         horizontalPicker.delegate = self
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         label.text = "\(horizontalPicker.selectedRow())"
     }
     
     // MARK: - HorizontalPickerViewProvider
     
-    func numberOfRowsInHorizontalPickerView(pickerView: HorizontalPickerView) -> Int {
+    func numberOfRowsInHorizontalPickerView(_ pickerView: HorizontalPickerView) -> Int {
         return dataSource.count
     }
     
-    func horizontalPickerView(pickerView: HorizontalPickerView, titleForRow row: Int) -> String {
+    func horizontalPickerView(_ pickerView: HorizontalPickerView, titleForRow row: Int) -> String {
         return "\(dataSource[row])"
     }
 
-    func horizontalPickerView(pickerView: HorizontalPickerView, didSelectRow row: Int) {
+    func horizontalPickerView(_ pickerView: HorizontalPickerView, didSelectRow row: Int) {
         label.text = "\(row)"
     }
     
-    func textColorForHorizontalPickerView(pickerView: HorizontalPickerView) -> UIColor {
-        return UIColor.lightGrayColor()
+    func textColorForHorizontalPickerView(_ pickerView: HorizontalPickerView) -> UIColor {
+        return UIColor.lightGray
     }
     
-    func textFontForHorizontalPickerView(pickerView: HorizontalPickerView) -> UIFont {
-        return UIFont.preferredFontForTextStyle(UIFontTextStyleTitle1)
+    func textFontForHorizontalPickerView(_ pickerView: HorizontalPickerView) -> UIFont {
+        return UIFont.preferredFont(forTextStyle: UIFontTextStyle.title1)
     }
 }
 

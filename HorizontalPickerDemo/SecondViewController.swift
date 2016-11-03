@@ -25,34 +25,34 @@ class SecondViewController: UIViewController, HorizontalPickerViewDataSource, Ho
         horizontalPicker.delegate = self
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         label.text = "\(horizontalPicker.selectedRow())"
     }
     
     // MARK: - HorizontalPickerViewProvider
     
-    func numberOfRowsInHorizontalPickerView(pickerView: HorizontalPickerView) -> Int {
+    func numberOfRowsInHorizontalPickerView(_ pickerView: HorizontalPickerView) -> Int {
         return dataSource.count
     }
     
-    func horizontalPickerView(pickerView: HorizontalPickerView, titleForRow row: Int) -> String {
+    func horizontalPickerView(_ pickerView: HorizontalPickerView, titleForRow row: Int) -> String {
         return dataSource[row]
     }
     
-    func horizontalPickerView(pickerView: HorizontalPickerView, didSelectRow row: Int) {
+    func horizontalPickerView(_ pickerView: HorizontalPickerView, didSelectRow row: Int) {
         label.text = "\(row)"
     }
     
-    func useTwoLineModeForHorizontalPickerView(pickerView: HorizontalPickerView) -> Bool {
+    func useTwoLineModeForHorizontalPickerView(_ pickerView: HorizontalPickerView) -> Bool {
         return true
     }
     
-    func textColorForHorizontalPickerView(pickerView: HorizontalPickerView) -> UIColor {
-        return UIColor.darkTextColor()
+    func textColorForHorizontalPickerView(_ pickerView: HorizontalPickerView) -> UIColor {
+        return UIColor.darkText
     }
     
-    func pickerViewShouldMask(pickerView: HorizontalPickerView) -> Bool {
+    func pickerViewShouldMask(_ pickerView: HorizontalPickerView) -> Bool {
         return true
     }
 
